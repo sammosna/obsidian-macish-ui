@@ -1,0 +1,133 @@
+/**
+ * Mac-ish UI
+ * by sammosna (https://sammosna.it)
+ * https://github.com/sammosna/obsidian-macish-ui
+**/
+
+
+body:not(.is-mobile) .app-container {
+	--header-height: 50px;
+	--tab-container-background: transparent;
+}
+
+body:not(.is-mobile) .mod-root .workspace-tab-header-container {
+	padding-top: 5px;
+}
+
+body:not(.is-mobile) .mod-root .workspace-leaf {
+	padding: 5px 10px 10px 10px;
+}
+
+body:not(.is-mobile) .mod-root .workspace-leaf-content {
+	border-radius: 6px !important;
+	/* margin: 10px; */
+	width: calc(100%);
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+}
+
+body:not(.is-mobile) .workspace-tabs .workspace-tab-header-container {
+	border: none;
+}
+
+body:not(.is-mobile) .mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header {
+	border-radius: 6px;
+	margin-bottom: 5px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+}
+
+body:not(.is-mobile) .mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header::before,
+body:not(.is-mobile) .mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header::after {
+	content: "";
+	display: none;
+}
+
+body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
+	padding: 0 15px;
+	gap: 10px;
+}
+
+body:not(.is-mobile) .mod-root .workspace-tab-header:not(.is-active) {
+	/* background: rgba(0, 0, 0, 0.2); */
+	background: var(--color-base-40);
+}
+
+body:not(.is-mobile) .workspace .mod-root .workspace-tab-header-inner::after {
+	display: none;
+}
+
+
+body:not(.is-mobile) .workspace-leaf-resize-handle {
+	--divider-color: transparent;
+}
+
+body:not(.is-mobile) .mod-left-split:hover .workspace-leaf-resize-handle,
+body:not(.is-mobile) .mod-right-split:hover .workspace-leaf-resize-handle {
+	--divider-color: unset;
+}
+
+
+body:not(.is-mobile) .side-dock-ribbon {
+	border: 0px;
+}
+
+body:not(.is-mobile) .side-dock-ribbon::before {
+	display: none;
+}
+
+/* .workspace-tabs.mod-top.mod-top-right-space .workspace-leaf-resize-handle {
+	--divider-color: rebeccapurple !important;
+} */
+
+body:not(.is-mobile) .prompt {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	border: 0px;
+}
+
+
+
+
+.outgoing-link-pane>.tree-item-self.is-collapsed {
+	color: var(--text-muted);
+}
+
+
+/* #region TRANSLUCENT */
+
+body.is-translucent {
+	--text-faint: var(--color-base-60);
+}
+
+/* #endregion */
+
+
+/* #region BANNER */
+
+body.has-banner .inline-title {
+	margin-top: calc(var(--banner-height) - 1.5rem);
+	/* margin-left: 6rem; */
+	position: absolute;
+}
+
+body.has-banner .obsidian-banner-wrapper {
+	margin-top: calc(var(--banner-height) + 1rem);
+}
+
+.obsidian-banner-spacer {
+	height: calc(var(--banner-height));
+}
+
+.obsidian-banner {
+	/* position: relative; */
+}
+
+.obsidian-banner::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* #endregion */
